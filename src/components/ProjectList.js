@@ -6,7 +6,11 @@ function ProjectList({ projects }) {
   return (
     <div id="projects">
       <h2>My Projects</h2>
-      <div id="project-list">{/* render ProjectItem components here */}</div>
+      <div id="project-list">{/* render ProjectItem components here */}
+      {projects.map((project, index) => (
+          <ProjectItem key={project.id} project={project} />
+        ))}
+      </div>
     </div>
   );
 }
